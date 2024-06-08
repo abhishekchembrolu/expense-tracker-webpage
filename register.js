@@ -7,11 +7,6 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     const confirmPassword = document.getElementById("confirm-password").value.trim();
     const errorMessage = document.getElementById("error-message");
 
-    // Simulated registration credentials
-    const validUsername = "abhishek";
-    const validEmail = "abhichembrolu4865@gmail.com";
-    const validPassword = "abhi2005";
-
     console.log("Username entered:", username);
     console.log("Email entered:", email);
     console.log("Password entered:", password);
@@ -21,12 +16,6 @@ document.getElementById("register-form").addEventListener("submit", function(eve
     if (username === "" || email === "" || password === "" || confirmPassword === "") {
         errorMessage.textContent = "All fields are required.";
         console.log("Error: All fields are required.");
-    } else if (username !== validUsername || email !== validEmail) {
-        errorMessage.textContent = "Incorrect username or email.";
-        console.log("Error: Incorrect username or email.");
-    } else if (password !== validPassword) {
-        errorMessage.textContent = "Incorrect password.";
-        console.log("Error: Incorrect password.");
     } else if (password !== confirmPassword) {
         errorMessage.textContent = "Passwords do not match.";
         console.log("Error: Passwords do not match.");
